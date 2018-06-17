@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="http://localhost:8097/SHAREUPfrontend/#/login/resources/css/login.css">
+<!-- without login, if user tries to logout  -->
+<!-- invalid credentials ...invalid email /password -->
+<span style="color:red">{{error.message}}</span>
+{{message}}
+<table>
+<tr>
+<td>Enter email </td>
+<td>
+<input type="email" ng-model="user.email">
+</td>
+</tr>
+
+<tr>
+<td>Enter password</td>
+<td><input type="password" ng-model="user.password"></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="login" ng-click="login(user)"></td>
+</tr>
+
+</table>
