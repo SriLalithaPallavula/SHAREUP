@@ -6,19 +6,19 @@ app.factory('UserService',function($http){
 	var userService={}
 	
 	userService.register=function(user){
-		return $http.post("http://localhost:8097/SHAREUPmiddleware/register",user)
+		return $http.post("http://localhost:8067/SHAREUPmiddleware/register",user)
 	}
 	
 	userService.login=function(user){
-		return $http.post("http://localhost:8097/SHAREUPmiddleware/login",user)
+		return $http.post("http://localhost:8067/SHAREUPmiddleware/login",user)
 	}
 	
 	userService.logout=function(){
-		return $http.put("http://localhost:8097/SHAREUPmiddleware/logout")
+		return $http.put("http://localhost:8067/SHAREUPmiddleware/logout")
 	}
      
 	userService.updateProfile=function(user){//updated user profile
-		return $http.put("http://localhost:8097/SHAREUPmiddleware/update",user)
+		return $http.put("http://localhost:8067/SHAREUPmiddleware/update",user)
 	}
 	
 	return userService;
