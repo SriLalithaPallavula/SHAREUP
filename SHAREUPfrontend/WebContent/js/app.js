@@ -31,6 +31,10 @@ app.config(function($routeProvider){
 		controller:'JobCtrl',
 		templateUrl:'views/inactivejobslist.html'
 	})
+	.when('/addblog',{
+		controller:'BlogCtrl',
+		templateUrl:'views/blogform.html'
+	})
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
