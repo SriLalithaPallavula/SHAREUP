@@ -35,6 +35,23 @@ app.config(function($routeProvider){
 		controller:'BlogCtrl',
 		templateUrl:'views/blogform.html'
 	})
+	.when('/blogsapproved',{
+		controller:'BlogCtrl',
+		templateUrl:'views/blogsapproved.html'
+	})
+	.when('/blogswaitingforapproval',{
+		controller:'BlogCtrl',
+		templateUrl:'views/blogswaitingforapproval.html'
+	})
+	.when('/getblogapproved/:id',{ //C->V
+		controller:'BlogInDetailCtrl',
+		templateUrl:'views/blogindetail.html'//blogs approved [likes,comments...]
+	})
+
+	.when('/getblogwaitingforapproval/:id',{ //C->V
+		controller:'BlogInDetailCtrl',
+		templateUrl:'views/blogapprovalform.html'//select * from blogpost where id=? approve/reject button
+	})
 	.otherwise({
 		templateUrl:'views/home.html'
 	})

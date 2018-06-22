@@ -45,6 +45,8 @@
 		data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined">Blog<b class="caret"></b></a>
 			<ul class="dropdown-menu">
           		<li><a href="#/addblog">Post Blog</a></li>
+          		<li><a href="#/blogsapproved">Approved Blogs</a></li>
+          		<li><a href="#/blogswaitingforapproval" ng-show="loggedInUser.role=='ADMIN'">Blogs Waiting For Approval</a></li>
 			</ul></li>
 
 
@@ -81,6 +83,7 @@
 
 <script type="text/javascript" src="controllers/blogpostcontroller.js"></script>
 <script type="text/javascript" src="services/blogservice.js"></script>
+<script type="text/javascript" src="controllers/blogindetailcontroller.js"></script>
 
 
 
