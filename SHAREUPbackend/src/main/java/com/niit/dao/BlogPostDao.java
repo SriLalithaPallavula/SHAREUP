@@ -9,4 +9,5 @@ void saveBlogPost(BlogPost blogpost);
 List<BlogPost> approvedBlogs();
 List<BlogPost> blogsWaitingForApproval();
 BlogPost getBlogPost(int id);
+void updateApprovalStatus(BlogPost blogPost);
 }

@@ -2,11 +2,11 @@
 <div class="panel panel-info">
 	<div class="panel-heading">
 		<b>{{blogPost.blogTitle}}</b><br>
-		<b>PostedOn {{blog.postedOn | date:'medium'}}</b> <br>
-		<b>PostedBy: {{blog.postedBy.firstname}} &nbsp; {{blog.postedBy.lastname}}</b><br>
+		<b>PostedOn {{blogPost.postedOn | date:'medium'}}</b> <br>
+		<b>PostedBy: {{blogPost.postedBy.firstname}} &nbsp; {{blogPost.postedBy.lastname}}</b><br>
 		</div>
 	<div class="panel panel-body">
-	{{blogPost.blogContent}}
+	<p ng-bind-html="content"></p>
 	</div>
 	{{blogPost.likes}} likes
 </div>

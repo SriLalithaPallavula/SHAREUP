@@ -1,3 +1,4 @@
+{{error.message}}<!-- Internal server error while updating/deleting the blogpost error message eill be displayed  -->
 <!-- blog waiting for approval -->
 <div class="panel panel-info">
 	<div class="panel-heading">
@@ -6,7 +7,7 @@
 		<b>PostedBy: {{blogPost.postedBy.firstname}} &nbsp; {{blogPost.postedBy.lastname}}</b>
 		</div>
 	<div class="panel panel-body">
-	{{blogPost.blogContent}}
+	<p ng-bind-html="content"></p>
 	</div>
 	<br>
 	<div>

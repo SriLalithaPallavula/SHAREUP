@@ -36,5 +36,19 @@ public class BlogPostDaoImpl implements BlogPostDao {
 		BlogPost blogPost=(BlogPost)session.get(BlogPost.class,id);
 		return blogPost;
 	}
+	public void updateApprovalStatus(BlogPost blogPost) {
+		//If blogpost is approved by admin,update approve value as true
+		//If blogpost is rejected by the admin, delete the blogPost
+		// blogpost.approved=?, if it is approved by admin
+		// blogpost.rejected=?, if it is rejected by admin
+		Session session=sessionFactory.getCurrentSession();
+		if(blogPost.isApproved()){
+			session.update(blogPost);//update blogpost set approved=true where id=?
+		}
+		else{
+			session.delete(blogPost);
+		}
+		
+	}
 
 }
