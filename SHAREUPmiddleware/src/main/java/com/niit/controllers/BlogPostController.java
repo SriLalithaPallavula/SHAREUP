@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.niit.dao.BlogPostDao;
+import com.niit.dao.BlogPostLikesDao;
 import com.niit.dao.UserDao;
 import com.niit.model.BlogPost;
+import com.niit.model.BlogPostLikes;
 import com.niit.model.ErrorClazz;
 import com.niit.model.User;
 
@@ -26,6 +28,8 @@ public class BlogPostController {
 	private BlogPostDao blogPostDao;
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private BlogPostLikesDao blogPostLikesDao;
 	//(blogTitle:'Introduction to DBMS'/'blogContent.............')
     @RequestMapping(value="/addblogpost",method=RequestMethod.POST)
 	public ResponseEntity<?> saveblogPost(HttpSession session,@RequestBody BlogPost blogPost){//Authentication and data
@@ -104,6 +108,30 @@ public class BlogPostController {
             return new ResponseEntity<ErrorClazz>(errorClazz,HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity<Void>(HttpStatus.OK);
+    }
+    @RequestMapping(value="/hasuserlikedblog/{blogpostId}",method=RequestMethod.GET)
+    public ResponseEntity<?> hasUserLikedBlogPost(@PathVariable int blogpostId,HttpSession session){
+    	String email=(String)session.getAttribute("email");
+    	if(email==null){
+    		ErrorClazz errorClazz=new ErrorClazz(7,"Unauthorized access.. please login");
+     return new ResponseEntity<ErrorClazz>(errorClazz,HttpStatus.UNAUTHORIZED);
+    }
+    	BlogPostLikes blogPostLikes=blogPostLikesDao.hasUserLikedBlogPost(blogpostId, email);
+	return new ResponseEntity<BlogPostLikes>(blogPostLikes,HttpStatus.OK);
+    	//If blogpostlikes is null, response.data=''
+	   // If blogpostlikes is 1 object, response.data=(blogpostlikes object)
+		
+    }
+    @RequestMapping(value="/updateblogpostlikes/{blogPostId}",method=RequestMethod.PUT)
+    public ResponseEntity<?> updateBlogPostLikes(@PathVariable int blogPostId,HttpSession session){
+    	String email=(String)session.getAttribute("email");
+    	if(email==null){
+    		ErrorClazz errorClazz=new ErrorClazz(7,"Unauthorized access.. please login");
+     return new ResponseEntity<ErrorClazz>(errorClazz,HttpStatus.UNAUTHORIZED);
+    }
+    	BlogPost blogPost=blogPostLikesDao.updateBlogPostLikes(blogPostId, email);
+    	return new ResponseEntity<BlogPost>(blogPost,HttpStatus.OK);
+    	//blogpost likes count is updated
     }
 }
 
