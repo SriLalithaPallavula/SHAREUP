@@ -29,6 +29,11 @@
       <scope>test</scope>
     </dependency>
     
+    <dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0</version>
+		</dependency>
      <dependency>
     <groupId>commons-pool</groupId>
     <artifactId>commons-pool</artifactId>
@@ -216,11 +221,7 @@
     <artifactId>spring-webmvc</artifactId>
     <version>4.2.5.RELEASE</version>
 </dependency>
-<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0</version>
-		</dependency>
+
     <dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
