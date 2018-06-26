@@ -22,5 +22,11 @@ app.factory('BlogService',function($http){
 		//if admin rejects the blogPost, blogPost.reject=?
 		return $http.put("http://localhost:8067/SHAREUPmiddleware/updateapprovalstatus",blogPost)
 	}
+	blogService.hasUserLikedBlog=function(blogpostId){
+		return $http.get("http://localhost:8067/SHAREUPmiddleware/hasuserlikedblog/"+blogpostId)
+	}
+	blogService.updateBlogPostLikes=function(blogPostId){
+		return $http.put("http://localhost:8067/SHAREUPmiddleware/updateblogpostlikes/"+blogPostId)
+	}
 	return blogService;
 })

@@ -8,5 +8,7 @@
 	<div class="panel panel-body">
 	<p ng-bind-html="content"></p>
 	</div>
+	
+	<a ng-click="updateBlogPostLikes(blogPost.id)"><span class="glyphicon glyphicon-thumbs-up" ng-class="isLiked?'liked':'default'"></span></a>
 	{{blogPost.likes}} likes
 </div>
