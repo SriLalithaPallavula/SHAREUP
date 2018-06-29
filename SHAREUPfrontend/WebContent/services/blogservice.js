@@ -11,7 +11,7 @@ app.factory('BlogService',function($http){
 		return $http.get("http://localhost:8067/SHAREUPmiddleware/blogsapproved")
 	}
 	blogService.blogsWaitingForApproval=function(){
-		return $http.get("http://localhost:8067/SHAREUPmiddleware/blogswaitingforapproval");
+		return $http.get("http://localhost:8067/SHAREUPmiddleware/blogswaitingforapproval")
 	}
 	blogService.getBlogPost=function(id){
 		return $http.get("http://localhost:8067/SHAREUPmiddleware/getblogpost/"+id)
@@ -27,6 +27,12 @@ app.factory('BlogService',function($http){
 	}
 	blogService.updateBlogPostLikes=function(blogPostId){
 		return $http.put("http://localhost:8067/SHAREUPmiddleware/updateblogpostlikes/"+blogPostId)
+	}
+	blogService.addComment=function(commentTxt,id){
+		return $http.post("http://localhost:8067/SHAREUPmiddleware/addcomment/"+commentTxt+"/"+id)
+	}
+	blogService.getAllBlogComments=function(blogPostId){
+		return $http.get("http://localhost:8067/SHAREUPmiddleware/getblogcomments/"+blogPostId)
 	}
 	return blogService;
 })

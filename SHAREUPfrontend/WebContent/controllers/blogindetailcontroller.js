@@ -5,7 +5,7 @@
  */
 app.controller('BlogInDetailCtrl',function($scope,$location,BlogService,$rootScope,$routeParams,$sce){
 	var id=$routeParams.id// id of the blogpost which has to be viewed by the user
-	
+	$scope.showCommentsIsClicked=false;
 	BlogService.getBlogPost(id).then(function(response){
 		//response.data -> blogpost object [select * from blogpost where id=?]
 		$scope.blogPost=response.data
@@ -67,5 +67,33 @@ app.controller('BlogInDetailCtrl',function($scope,$location,BlogService,$rootSco
 	
 		})
 	}
+	$scope.addComment=function(){
+		//id is the id of the blogpost
+		//commentTxt is the comment posted by user
+		BlogService.addComment($scope.commentTxt,id).then(
+				function(response){
+		alert('comment posted successfully')	
+		$scope.commentTxt=''
+			getAllBlogComments()
+		},function(response){
+			$scope.error=response.data
+			if(response.status==401)
+				$location.path('/login')
+		})
+		
+	}
+	  function getAllBlogComments(){
+		  BlogService.getAllBlogComments(id).then(function(response){
+			  $scope.blogComments=response.data
+		  },function(response){
+			  $scope.error=response.data
+				if(response.status==401)
+					$location.path('/login')
+		  })
+	  }
+	  $scope.showComments=function(){
+		  $scope.showCommentsIsClicked=!$scope.showCommentsIsClicked
+	  }
+	  getAllBlogComments()
 })
 

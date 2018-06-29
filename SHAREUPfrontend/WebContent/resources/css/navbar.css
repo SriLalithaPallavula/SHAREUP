@@ -1,9 +1,9 @@
 @CHARSET "ISO-8859-1";
-#nav_bar {
-background-color: #FFBF00;
+.navbar {
+background-color: #71940C;
 border-color: white;
 }
-#links a{
-     color:#4B4E44;
+.links a{
+     color:#241606;
      font-size:18px;
 }

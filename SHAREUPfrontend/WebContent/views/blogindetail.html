@@ -11,4 +11,20 @@
 	
 	<a ng-click="updateBlogPostLikes(blogPost.id)"><span class="glyphicon glyphicon-thumbs-up" ng-class="isLiked?'liked':'default'"></span></a>
 	{{blogPost.likes}} likes
+	
+	<div>
+	<textarea rows="4" cols="20" ng-model="commentTxt"></textarea>
+	<br>
+	<button class="btn btn-primary" ng-click="addComment()">Post Comment</button><br>
+	<a ng-click="showComments()">Show Comments</a>
+	</div>
+	
+	<div ng-show="showCommentsIsClicked">
+	<ul>
+	<li ng-repeat="comment in blogComments | orderBy:'-commentedOn'">
+	<b>{{comment.commentTxt}},</b>&nbsp; &nbsp;<b>Posted By-</b>{{comment.commentedBy.firstname}}&nbsp;{{comment.commentedBy.lastname}},&nbsp;&nbsp;<b>Posted On-</b>{{comment.commentedOn | date:'medium'}}
+	</li>
+	</ul>
+	
+	</div>
 </div>

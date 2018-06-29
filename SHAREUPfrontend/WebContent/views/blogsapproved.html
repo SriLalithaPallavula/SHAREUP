@@ -5,10 +5,10 @@
 	</div>
 	<div class="panel-body">
 	<ul>
-		<li ng-repeat="blog in blogsApproved">
+		<li ng-repeat="blog in blogsApproved | orderBy:'-commentedOn'">
 		<a href="#/getblogapproved/{{blog.id}}"><b>Blog Title:</b>{{blog.blogTitle}}<br></a>
-		<b>PostedOn:</b>{{blogPost.postedOn | date:'medium'}} <br>
-		<b>PostedBy:</b>{{blogPost.postedBy.firstname}} &nbsp; {{blogPost.postedBy.lastname}}<br>
+		<b>PostedOn:</b> {{blog.postedOn | date:'medium'}} <br>
+		<b>PostedBy:</b> {{blog.postedBy.firstname}} &nbsp; {{blog.postedBy.lastname}}<br>
 		<hr>
 		</li>
 		</ul>
