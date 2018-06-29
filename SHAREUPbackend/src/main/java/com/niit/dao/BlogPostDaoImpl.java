@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.model.BlogComment;
 import com.niit.model.BlogPost;
 @Repository("blogpostDao")
 @Transactional
@@ -49,6 +50,16 @@ public class BlogPostDaoImpl implements BlogPostDao {
 			session.delete(blogPost);
 		}
 		
+	}
+	public void addBlogComment(BlogComment blogComment) {
+		Session session=sessionFactory.getCurrentSession();
+		session.save(blogComment);
+		
+	}
+	public List<BlogComment> getAllBlogComments(int blogPostId) {
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from BlogComment where blogPost.id="+blogPostId);
+		return query.list();
 	}
 
 }
