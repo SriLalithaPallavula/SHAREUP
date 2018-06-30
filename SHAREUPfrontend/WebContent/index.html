@@ -14,7 +14,7 @@
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
 	rel="stylesheet" />
 <link href="resources/css/glyphiconcolor.css" rel="stylesheet">
-<link href="resources/css/navbar.css" rel="stylesheet">
+
 
 </head>
 <body ng-app="app">
@@ -51,7 +51,7 @@
           		<li><a href="#/blogswaitingforapproval" ng-show="loggedInUser.role=='ADMIN'">Blogs Waiting For Approval</a></li>
 			</ul></li>
 
-
+            <li><a href="#/uploadprofilepic" ><img src="http://localhost:8067/SHAREUPmiddleware/getimage/{{loggedInUser.email}}" alt="UploadProfilePic" height="35px" width="35px" class="img-rounded"></a></li>
              
            <li><a href="#/updateprofile" ng-show="loggedInUser.firstname!=undefined">Welcome {{loggedInUser.firstname}} &nbsp; {{loggedInUser.lastname}}</a></li>
            <li><a href="" ng-click="logout()" ng-show="loggedInUser.firstname!=undefined">Sign out</a></li>

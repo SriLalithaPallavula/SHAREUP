@@ -52,6 +52,9 @@ app.config(function($routeProvider){
 		controller:'BlogInDetailCtrl',
 		templateUrl:'views/blogapprovalform.html'//select * from blogpost where id=? approve/reject button
 	})
+	.when('/uploadprofilepic',{
+		templateUrl:'views/uploadprofilepicture.html'
+	})
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
