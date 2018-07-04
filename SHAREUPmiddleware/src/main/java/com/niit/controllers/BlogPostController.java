@@ -110,14 +110,14 @@ public class BlogPostController {
         }
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
-    @RequestMapping(value="/hasuserlikedblog/{blogpostId}",method=RequestMethod.GET)
-    public ResponseEntity<?> hasUserLikedBlogPost(@PathVariable int blogpostId,HttpSession session){
+    @RequestMapping(value="/hasuserlikedblog/{blogPostId}",method=RequestMethod.GET)
+    public ResponseEntity<?> hasUserLikedBlogPost(@PathVariable int blogPostId,HttpSession session){
     	String email=(String)session.getAttribute("email");
     	if(email==null){
     		ErrorClazz errorClazz=new ErrorClazz(7,"Unauthorized access.. please login");
      return new ResponseEntity<ErrorClazz>(errorClazz,HttpStatus.UNAUTHORIZED);
     }
-    	BlogPostLikes blogPostLikes=blogPostLikesDao.hasUserLikedBlogPost(blogpostId, email);
+    	BlogPostLikes blogPostLikes=blogPostLikesDao.hasUserLikedBlogPost(blogPostId, email);
 	return new ResponseEntity<BlogPostLikes>(blogPostLikes,HttpStatus.OK);
     	//If blogpostlikes is null, response.data=''
 	   // If blogpostlikes is 1 object, response.data=(blogpostlikes object)

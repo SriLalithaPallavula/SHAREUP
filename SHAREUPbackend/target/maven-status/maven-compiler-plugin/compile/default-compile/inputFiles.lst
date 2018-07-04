@@ -1,4 +1,5 @@
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\BlogPostLikesDao.java
+C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\FriendDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\ProfilePictureDao.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\ProfilePicture.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\JobDao.java
@@ -7,12 +8,14 @@ C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\mo
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\BlogPostDao.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\UserDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\SHAREUPbackend\App.java
+C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\Friend.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\ProfilePictureDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\BlogPostLikesDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\BlogPost.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\UserDao.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\User.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\configuration\DBConfiguration.java
+C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\FriendDao.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\BlogPostDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\JobDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\Job.java
