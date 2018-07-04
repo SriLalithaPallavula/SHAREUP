@@ -19,7 +19,7 @@ app.controller('BlogInDetailCtrl',function($scope,$location,BlogService,$rootSco
 	 
 	  BlogService.hasUserLikedBlog(id).then(function(response){
 		  //response.data = select* from blogpostlikes where blogpost_id=? and user_email=?
-		  console.log(response.data)
+		  
 	      if(response.data=='')
 	    	  $scope.isLiked=false//glyphicon color is black
 	    	  else

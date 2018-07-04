@@ -4,7 +4,7 @@
 		<b>{{blogPost.blogTitle}}</b><br>
 		<b>PostedOn {{blogPost.postedOn | date:'medium'}}</b> <br>
 		<b>PostedBy: {{blogPost.postedBy.firstname}} &nbsp; {{blogPost.postedBy.lastname}}</b><br>
-		<img alt="no image" src="http://localhost:8067/SHAREUPmiddleware/getimage/{{blogPost.postedBy.email}}">
+		<img src="http://localhost:8067/SHAREUPmiddleware/getimage/{{blogPost.postedBy.email}}" width="35px" height="35px">
 		</div>
 	<div class="panel panel-body">
 	<p ng-bind-html="content"></p>

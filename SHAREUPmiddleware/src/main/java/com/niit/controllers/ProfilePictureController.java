@@ -40,7 +40,7 @@ private ProfilePictureDao profilePictureDao;
 		//email:.+ -> truncate special character like .
 		@RequestMapping(value="/getimage/{email:.+}",method=RequestMethod.GET)
 	public @ResponseBody byte[] getImage(@PathVariable String email,HttpSession session){
-		String auth=(String)session.getAttribute("loginId");
+		String auth=(String)session.getAttribute("email");
 		if(auth==null)
 			return null;//src attribute
 			ProfilePicture profilePicture=profilePictureDao.getProfilePicture(email);
