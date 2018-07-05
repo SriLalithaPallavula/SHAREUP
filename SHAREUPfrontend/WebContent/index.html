@@ -58,7 +58,8 @@
           		<li><a href="#/pendingrequests">Pending Requests</a></li>
           		<li><a href="#/friends">Friends</a></li>
 			</ul></li>
-
+            
+            <li><a href="#/chat" ng-show="loggedInUser.firstname">chat </a></li>
             <li><a href="#/uploadprofilepic" ng-show="loggedInUser.firstname">
             <img src="http://localhost:8067/SHAREUPmiddleware/getimage/{{loggedInUser.email}}" alt="UploadProfilePic" height="35px" width="35px" class="img-rounded"></a></li>
              
@@ -99,6 +100,11 @@
 <script type="text/javascript" src="controllers/friendcontroller.js"></script>
 <script type="text/javascript" src="services/friendservice.js"></script>
 
+<script type="text/javascript" src="services/chatservice.js"></script>
+<script type="text/javascript" src="controllers/chatcontroller.js"></script>
+
+<script type="text/javascript" src="js/sockjs/sockjs.min.js"></script>
+	<script type="text/javascript" src="js/stomp/dist/stomp.min.js"></script>
 
 
 
