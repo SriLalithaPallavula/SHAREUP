@@ -13,10 +13,12 @@ C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\da
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\BlogPostLikesDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\BlogPost.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\UserDao.java
+C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\configuration\WebSocketConfiguration.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\User.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\configuration\DBConfiguration.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\FriendDao.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\BlogPostDaoImpl.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\dao\JobDaoImpl.java
+C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\Chat.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\Job.java
 C:\Users\Srilalitha\git\SHAREUP\SHAREUP\SHAREUPbackend\src\main\java\com\niit\model\BlogComment.java
