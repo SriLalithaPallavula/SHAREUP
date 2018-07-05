@@ -12,4 +12,5 @@ void addFriend(Friend friend);
 List<Friend>pendingRequests(String email);
 
 void updateStatus(Friend friendRequest);
+List<Friend> getAllFriends(String email);
 }

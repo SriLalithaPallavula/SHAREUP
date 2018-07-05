@@ -54,4 +54,16 @@ app.controller('FriendCtrl',function($scope,$location,FriendService,$rootScope){
 					$location.path('/login')
 		  })
 	  }
+	      function getAllFriends(){
+	    	  FriendService.getAllFriends().then(function(response){
+	    		//response.data=?
+	    		  $scope.friends=response.data
+	    	  },function(response){
+	    		  $scope.error=response.data
+					if(response.status==401)
+						$location.path('/login')
+	    	  
+	    	  })
+	      }
+	       getAllFriends()
 })

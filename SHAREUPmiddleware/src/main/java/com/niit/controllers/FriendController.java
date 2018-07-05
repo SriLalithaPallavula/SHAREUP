@@ -72,4 +72,15 @@ public class FriendController {
 	      return new ResponseEntity<Void>(HttpStatus.OK);
 	   
    }
+   @RequestMapping(value="/friends",method=RequestMethod.GET)
+    public ResponseEntity<?> getAllFriends(HttpSession session){
+    	String email=(String)session.getAttribute("email");
+		 if(email==null){
+	 		ErrorClazz errorClazz=new ErrorClazz(7,"Unauthorized access.. please login");
+	 		return new ResponseEntity<ErrorClazz>(errorClazz,HttpStatus.UNAUTHORIZED);
+		 }
+    	
+    	List<Friend> friends=friendDao.getAllFriends(email);
+    	return new ResponseEntity<List<Friend>>(friends,HttpStatus.OK);
+    }
 }

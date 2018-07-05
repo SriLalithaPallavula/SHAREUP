@@ -55,5 +55,23 @@ private SessionFactory sessionFactory;
 			session.delete(friendRequest);
 		
 	}
+	public List<Friend> getAllFriends(String email) {
+		Session session=sessionFactory.getCurrentSession();
+		//select toId_email from friend where fromId_email=? and status='A'-SQL
+		//Type of toId property is User
+		Query query1=session.createQuery("select f.toId from Friend f where f.fromId.email=? and f.status=?");//HQL
+		query1.setString(0, email);
+		query1.setCharacter(1, 'A');
+		List<Friend> friendsList1=query1.list();
+		
+		Query query2=session.createQuery("select f.fromId from Friend f where f.toId.email=? and f.status=?");
+		query2.setString(0, email);
+		query2.setCharacter(1, 'A');
+		List<Friend> friendsList2=query2.list();
+		
+		friendsList2.addAll(friendsList1);
+		
+		return friendsList2;
+	}
 
 }

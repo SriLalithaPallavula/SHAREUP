@@ -9,9 +9,10 @@
    {{friendRequest.fromId.email}}<br>
    {{friendRequest.fromId.firstname}} &nbsp; {{friendRequest.fromId.lastname}}<br>
    {{friendRequest.fromId.role}}<br>
-   <img src="http://localhost:8067/SHAREUPmiddleware/getimage/{{friendRequest.fromId.email}}" height="50px" width="50px" alt="No Profile pic"><br>
+   <img src="http://localhost:8067/SHAREUPmiddleware/getimage/{{friendRequest.fromId.email}}" height="60px" width="60px" alt="No Profile pic"><br>
    <button class="btn btn-primary" ng-click="updateStatus(friendRequest,'A')">Accept the Request</button>
    <button class="btn btn-danger" ng-click="updateStatus(friendRequest,'D')">Delete the Request</button>
+   <hr>
    </li>
    
    </ul>
